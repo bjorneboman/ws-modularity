@@ -13,21 +13,26 @@ const converts = {
 }
 
 buttons.forEach((button, index) => {
-    if(index === 0){
         button.addEventListener("click", () => {
-            divs[index].textContent = convertLength(inputs[index].value)
+            divs[index].textContent = converts[index](inputs[index].value)
         })
-    } else if(index === 1) {
-        button.addEventListener("click", () => {
-            divs[index].textContent = convertTemp(inputs[index].value)
-        })
-    } else {
-        button.addEventListener("click", () => {
-            divs[index].textContent = convertWeight(inputs[index].value).toFixed(2)   
-        })  
-    }
-        
 })
+
+// buttons.forEach((button, index) => {
+//     if(index === 0){
+//         button.addEventListener("click", () => {
+//             divs[index].textContent = convertLength(inputs[index].value)
+//         })
+//     } else if(index === 1) {
+//         button.addEventListener("click", () => {
+//             divs[index].textContent = convertTemp(inputs[index].value)
+//         })
+//     } else {
+//         button.addEventListener("click", () => {
+//             divs[index].textContent = convertWeight(inputs[index].value).toFixed(2)   
+//         })  
+//     }       
+// })
 
 
 
