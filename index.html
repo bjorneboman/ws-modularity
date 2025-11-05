@@ -11,18 +11,47 @@
         <h1>Workshop - Exercise in JS Modularity</h1>
     </header>
     <main>
+
+        <!-- Length conversion  -->
+
         <section id="length-conversion">
             <h2>Convert meters to centimeters:</h2>
             <input type="text" name="length" id="length">
+            from:
+            <select name="length-unit-from" id="length-unit-from">
+                <option value="m">m</option>
+                <option value="cm">cm</option>
+            </select> 
+            to:
+            <select name="length-unit-to" id="length-unit-to">
+                <option value="m">m</option>
+                <option value="cm">cm</option>
+            </select>
             <button id="length-btn">Konvertera mera!</button>
             <div id="length-result"></div>
         </section>
+        
+        <!-- Temperature conversion -->
+        
         <section id="temp-conversion">
             <h2>Convert Celcius to Fahrenheit</h2>
             <input type="text" name="temp" id="temp">
+            from:
+            <select name="length-unit-from" id="length-unit-from">
+                <option value="c">C</option>
+                <option value="f">F</option>
+            </select> 
+            to:
+            <select name="length-unit-to" id="length-unit-to">
+                <option value="c">C</option>
+                <option value="f">F</option>
+            </select>
             <button id="temp-btn">Konvertera mera!</button>
             <div id="temp-result"></div>
         </section>
+
+        <!-- Weight conversion -->
+
         <section id="weight-conversion">
             <h2>Convert kg to lbs</h2>
             <input type="text" name="weight" id="weight">

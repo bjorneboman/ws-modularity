@@ -5,6 +5,14 @@ import { convert as convertWeight } from "./convertWeight.js";
 const buttons = document.querySelectorAll("button")
 const inputs = document.querySelectorAll("input")
 const divs = document.querySelectorAll("div")
+const lengthUnitFrom = document.querySelector("#length-unit-from")
+const lengthUnitTo = document.querySelector("#length-unit-to")
+const units = {
+    0: {
+        from: lengthUnitFrom,
+        to: lengthUnitTo
+    }
+}
 
 const converts = {
     0: convertLength,
@@ -14,7 +22,7 @@ const converts = {
 
 buttons.forEach((button, index) => {
         button.addEventListener("click", () => {
-            divs[index].textContent = converts[index](inputs[index].value)
+            divs[index].textContent = converts[index](inputs[index].value, units[index])
         })
 })
 
@@ -33,9 +41,3 @@ buttons.forEach((button, index) => {
 //         })  
 //     }       
 // })
-
-
-
-console.log(`10 meter = ${convertLength(10)} cm`)
-console.log(`37 °C = ${convertTemp(37)}°F`)
-console.log(`62 kg = ${convertWeight(62).toFixed(2) } lbs`)
