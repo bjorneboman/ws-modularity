@@ -1,6 +1,8 @@
-import { convert as convertLength } from "./convertLength.js";
-import { convert as convertTemp } from "./convertTemp.js"
-import { convert as convertWeight } from "./convertWeight.js";
+import * as converts from "./conversions.js"
+
+// import { convert as convertLength } from "./convertLength.js";
+// import { convert as convertTemp } from "./convertTemp.js"
+// import { convert as convertWeight } from "./convertWeight.js";
 
 const buttons = document.querySelectorAll("button")
 const inputs = document.querySelectorAll("input")
@@ -30,15 +32,15 @@ const units = {
     }
 }
 
-const converts = {
-    0: convertLength,
-    1: convertTemp,
-    2: convertWeight
+const convert = {
+    0: converts.convertLength,
+    1: converts.convertTemp,
+    2: converts.convertWeight
 }
 
 buttons.forEach((button, index) => {
         button.addEventListener("click", () => {
-            divs[index].textContent = converts[index](inputs[index].value, units[index])
+            divs[index].textContent = convert[index](inputs[index].value, units[index])
         })
 })
 
