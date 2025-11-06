@@ -15,7 +15,7 @@
         <!-- Length conversion  -->
 
         <section id="length-conversion">
-            <h2>Convert meters to centimeters:</h2>
+            <h2>Convert meters / centimeters</h2>
             <input type="text" name="length" id="length">
             from:
             <select name="length-unit-from" id="length-unit-from">
@@ -34,15 +34,15 @@
         <!-- Temperature conversion -->
         
         <section id="temp-conversion">
-            <h2>Convert Celcius to Fahrenheit</h2>
+            <h2>Convert Celcius / Fahrenheit</h2>
             <input type="text" name="temp" id="temp">
             from:
-            <select name="length-unit-from" id="length-unit-from">
+            <select name="temp-unit-from" id="temp-unit-from">
                 <option value="c">C</option>
                 <option value="f">F</option>
             </select> 
             to:
-            <select name="length-unit-to" id="length-unit-to">
+            <select name="temp-unit-to" id="temp-unit-to">
                 <option value="c">C</option>
                 <option value="f">F</option>
             </select>
@@ -53,8 +53,18 @@
         <!-- Weight conversion -->
 
         <section id="weight-conversion">
-            <h2>Convert kg to lbs</h2>
+            <h2>Convert kg / lbs</h2>
             <input type="text" name="weight" id="weight">
+            from:
+            <select name="weight-unit-from" id="weight-unit-from">
+                <option value="kg">kg</option>
+                <option value="lbs">lbs</option>
+            </select> 
+            to:
+            <select name="weight-unit-to" id="weight-unit-to">
+                <option value="kg">kg</option>
+                <option value="lbs">lbs</option>
+            </select>
             <button id="weight-btn">Konvertera mera!</button>
             <div id="weight-result"></div>
         </section>
